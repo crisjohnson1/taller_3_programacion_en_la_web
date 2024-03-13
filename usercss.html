@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Usuarios</h1>
+    </header>
+    <main>
+        <form action="procesar_registro.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="ccusuario">Nombre de Usuario:</label>
+            <input type="text" id="ccusuario" name="ccusuario" required>
+
+            <label for="ccpasswd">Contraseña:</label>
+            <input type="password" id="ccpasswd" name="ccpasswd" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+          
+            <label for="id_pais">País:</label>
+            <select id="id_pais" name="id_pais">
+                <option value="1">Colombia</option>
+                <option value="2">España</option>
+                <option value="3">México</option>
+                <option value="4">Francia</option>
+                <option value="5">Estados Unidos</option>
+                <option value="6">Turquía</option>
+                <option value="7">Italia</option>
+                <option value="8">Venezuela</option>
+                <option value="9">Grecia</option>
+                <option value="10">Austria</option>
+                <option value="11">Alemania</option>
+                <option value="12">Emiratos Árabes Unidos</option>
+                <option value="13">Polonia</option>
+                <option value="14">Croacia</option>
+                <option value="15">India</option>
+                <option value="16">Tonga</option>
+                <option value="17">Filipinas</option>
+                <option value="18">Etiopía</option>
+                <option value="19">Canadá</option>
+                <option value="20">Zambia</option>
+                <option value="21">Australia</option>
+                <option value="22">Zimbabue</option>
+                <option value="23">Reino Unido</option>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </main>
+    <footer>
+        <p>Cristian Johnson</p>
+    </footer>
+</body>
+</html>
