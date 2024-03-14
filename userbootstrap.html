@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registro de Usuarios</h1>
+        <form action="procesar_registro.php" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellido"  class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="ccusuario" class="form-label">Nombre de Usuario:</label>
+                <input type="text" class="form-control" id="ccusuario" name="ccusuario" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ccpasswd" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="ccpasswd" name="ccpasswd" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="id_pais" class="form-label">País:</label>
+                <select class="form-select" id="id_pais" name="id_pais">
+                    <option value="1">Colombia</option>
+                    <option value="2">España</option>
+                    <option value="3">México</option>
+                    <option value="4">Francia</option>
+                    <option value="5">Estados Unidos</option>
+                    <option value="6">Turquía</option>
+                    <option value="7">Italia</option>
+                    <option value="8">Venezuela</option>
+                    <option value="9">Grecia</option>
+                    <option value="10">Austria</option>
+                    <option value="11">Alemania</option>
+                    <option value="12">Emiratos Árabes Unidos</option>
+                    <option value="13">Polonia</option>
+                    <option value="14">Croacia</option>
+                    <option value="15">India</option>
+                    <option value="16">Tonga</option>
+                    <option value="17">Filipinas</option>
+                    <option value="18">Etiopía</option>
+                    <option value="19">Canadá</option>
+                    <option value="20">Zambia</option>
+                    <option value="21">Australia</option>
+                    <option value="22">Zimbabue</option>
+                    <option value="23">Reino Unido</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+
+    <!-- Enlace a Bootstrap Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
