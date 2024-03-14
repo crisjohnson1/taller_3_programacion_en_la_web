@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Usuarios</h1>
+        <form action="procesar_registro.php" method="post">
+            <div class="row">
+                <div class="six columns">
+                    <label for="nombre">Nombre</label>
+                    <input class="u-full-width" type="text" placeholder="Ingresa tu nombre" id="nombre" name="nombre" required>
+                </div>
+                <div class="six columns">
+                    <label for="apellido">Apellido</label>
+                    <input class="u-full-width" type="text" placeholder="Ingresa tu apellido" id="apellido" name="apellido" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six columns">
+                    <label for="email">Correo Electrónico</label>
+                    <input class="u-full-width" type="email" placeholder="Ingresa tu correo electrónico" id="email" name="email" required>
+                </div>
+                <div class="six columns">
+                    <label for="telefono">Teléfono</label>
+                    <input class="u-full-width" type="text" placeholder="Ingresa tu teléfono" id="telefono" name="telefono" required>
+                </div>
+            </div>
+            <label for="direccion">Dirección</label>
+            <input class="u-full-width" type="text" placeholder="Ingresa tu dirección" id="direccion" name="direccion" required>
+            
+            <label for="ccusuario">Nombre de Usuario</label>
+            <input class="u-full-width" type="text" placeholder="Elige un nombre de usuario" id="ccusuario" name="ccusuario" required>
+            
+            <label for="ccpasswd">Contraseña</label>
+            <input class="u-full-width" type="password" placeholder="Elige una contraseña" id="ccpasswd" name="ccpasswd" required>
+            
+            <label for="id_pais">País</label>
+            <select class="u-full-width" id="id_pais" name="id_pais">
+                <option value="1">Colombia</option>
+                <option value="2">España</option>
+                <option value="3">México</option>
+                <option value="4">Francia</option>
+                <option value="5">Estados Unidos</option>
+                <option value="6">Turquía</option>
+                <option value="7">Italia</option>
+                <option value="8">Venezuela</option>
+                <option value="9">Grecia</option>
+                <option value="10">Austria</option>
+                <option value="11">Alemania</option>
+                <option value="12">Emiratos Árabes Unidos</option>
+                <option value="13">Polonia</option>
+                <option value="14">Croacia</option>
+                <option value="15">India</option>
+                <option value="16">Tonga</option>
+                <option value="17">Filipinas</option>
+                <option value="18">Etiopía</option>
+                <option value="19">Canadá</option>
+                <option value="20">Zambia</option>
+                <option value="21">Australia</option>
+                <option value="22">Zimbabue</option>
+                <option value="23">Reino Unido</option>
+            </select>
+            
+            <input class="button-primary" type="submit" value="Registrarse">
+        </form>
+    </div>
+</body>
+</html>
