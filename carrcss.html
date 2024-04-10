@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registro de Autos</h1>
+    </header>
+    <main>
+        <form action="procesar_registro.php" method="post">
+            <label for="nombre ">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="anio">Modelo:</label>
+            <input type="number" id="anio" name="anio" required>
+
+            <label for="motor">Motor:</label>
+            <input type="number" id="Motor" name="Motor" required>
+
+            <label for="ccusuario">Nombre de Usuario:</label>
+            <input type="text" id="ccusuario" name="ccusuario" required>
+
+            <label for="ccpasswd">Contraseña:</label>
+            <input type="password" id="ccpasswd" name="ccpasswd" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+          
+            <label for="id_movidoa">Tipo de combustible:</label>
+            <select id="id_movidoa" name="id_movidoa">
+                <option value="1">Gasolina</option>
+                <option value="2">Diesel</option>
+                <option value="3">Gas</option>
+                <option value="4">Electrico</option>
+            </select>
+            </br>
+            <label for="id_estado">Estado del Vehiculo:</label>
+            <select id="id_estado" name="id_estado">
+                <option value="1">Nuevo</option>
+                <option value="2">Usado</option>
+            </select>
+            </br>
+            <label for="id_tipocoche">Tipo de Vehiculo:</label>
+            <select id="id_tipocoche" name="id_tipocoche">
+                <option value="1">Automovil</option>
+                <option value="2">Camioneta</option>
+                <option value="3">Bus</option>
+                <option value="4">Motocicleta</option>
+            </select>
+            </br>
+            <label for="id_marca">Marca:</label>
+            <select id="id_marca" name="id_marca">
+                <option value="1">Toyota</option>
+                <option value="2">subaru</option>
+                <option value="3">Nissan</option>
+                <option value="4">Bajaj</option>
+                <option value="5">Ford</option>
+                <option value="6">Chevrolet</option>
+                <option value="7">Honda</option>
+                <option value="8">Hyundai</option>
+                <option value="9">Kia</option>
+                <option value="10">Mercedes-Benz</option>
+                <option value="11">BMW</option>
+                <option value="12">Audi</option>
+                <option value="13">Volkswagen</option>
+                <option value="14">Mazda</option>
+                <option value="15">Porsche</option>
+                <option value="16">Ferrari</option>
+                <option value="17">Lamborghini</option>
+                <option value="18">Mitsubishi</option>
+                <option value="19">Jaguar</option>
+                <option value="20">Bentley</option>
+                <option value="21">Rolls-Royce</option>
+                <option value="22">Land Rover</option>
+                <option value="23">Alfa Romeo</option>
+                <option value="24">Aston Martin</option>
+                <option value="25">Maserati</option>
+                <option value="26">Jeep</option>
+                <option value="27">Dodge</option>
+                <option value="28">Chrysler</option>
+                <option value="29">Ram</option>
+                <option value="30">GMC</option>
+                <option value="31">Cadillac</option>
+                <option value="32">Lexus</option>
+                <option value="33">Infiniti</option>
+                <option value="34">Acura</option>
+                <option value="35">Lincoln</option>
+                <option value="36">Buick</option>
+                <option value="37">Tesla</option>
+                <option value="38">Mini</option>
+                <option value="39">Smart</option>
+                <option value="40">Volvo</option>
+                <option value="41">Peugeot</option>
+                <option value="42">Renault</option>
+                <option value="43">Skoda</option>
+                <option value="44">Fiat</option>
+                <option value="45">Seat</option>
+                <option value="46">Citroën</option>
+                <option value="47">Opel</option>
+                <option value="48">Saab</option>
+                <option value="49">Suzuki</option>
+                <option value="50">Daihatsu</option>
+            </select>
+                
+            <br>
+            <button type="submit">Registrarse</button>
+        </form>
+    </main>
+    <footer>
+        <p>Cristian Johnson</p>
+    </footer>
+</body>
+</html>
