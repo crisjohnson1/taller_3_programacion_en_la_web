@@ -5,13 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var direccion = document.getElementById("direccion").value;
+            var ccusuario = document.getElementById("ccusuario").value;
+            var ccpasswd = document.getElementById("ccpasswd").value;
+            var ccpasswd_confirm = document.getElementById("ccpasswd_confirm").value;
+            var email = document.getElementById("email").value;
+
+            // Validación del nombre
+            if (nombre.trim().length === 0 || nombre.length > 25) {
+                alert("El campo nombre debe estar lleno y tener una longitud de máximo 25 caracteres.");
+                return false;
+            }
+
+            // Validación del apellido
+            if (apellido.trim().length === 0 || apellido.length > 25) {
+                alert("El campo apellido debe estar lleno y tener una longitud de máximo 25 caracteres.");
+                return false;
+            }
+
+            // Validación de la dirección
+            var palabrasPermitidas = ["cll", "cra", "av", "anv", "trans"];
+            var direccionValida = false;
+            palabrasPermitidas.forEach(function(palabra) {
+                if (direccion.toLowerCase().startsWith(palabra)) {
+                    direccionValida = true;
+                }
+            });
+            if (!direccionValida) {
+                alert("El campo dirección debe empezar por las siguientes palabras: cll, cra, av, anv, trans.");
+                return false;
+            }
+
+            // Validación del nombre de usuario
+            if (ccusuario.trim().length < 10 || ccusuario.length > 20 || !/^[a-zA-Z0-9]+$/.test(ccusuario)) {
+                alert("El campo nombre de usuario debe estar lleno, tener una longitud entre 10 y 20 caracteres y no contener caracteres especiales.");
+                return false;
+            }
+
+            // Validación de la contraseña
+            if (ccpasswd.trim().length < 15 || ccpasswd.length > 20 || !/[A-Z]/.test(ccpasswd) || !/\d/.test(ccpasswd) || !/[#%\/&]/.test(ccpasswd)) {
+                alert("El campo contraseña debe estar lleno, tener una longitud entre 15 y 20 caracteres, contener mayúsculas, números y/o los siguientes caracteres especiales: #, %, /, &.");
+                return false;
+            }
+
+            // Validación de la confirmación de la contraseña
+            if (ccpasswd !== ccpasswd_confirm) {
+                alert("La contraseña y su confirmación no coinciden.");
+                return false;
+            }
+
+            // Validación del correo electrónico
+            if (email.trim().length === 0 || email.length > 120) {
+                alert("El campo email debe estar lleno y tener una longitud de máximo 120 caracteres.");
+                return false;
+            }
+
+            return true; // Si todas las validaciones pasan, se envía el formulario
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Registro de Usuarios</h1>
     </header>
     <main>
-        <form action="procesar_registro.php" method="post">
+        <form action="procesar_registro.php" method="post" onsubmit="return validarFormulario()">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -26,6 +88,9 @@
 
             <label for="ccpasswd">Contraseña:</label>
             <input type="password" id="ccpasswd" name="ccpasswd" required>
+
+            <label for="ccpasswd_confirm">Confirmar Contraseña:</label>
+            <input type="password" id="ccpasswd_confirm" name="ccpasswd_confirm" required>
 
             <label for="direccion">Dirección:</label>
             <input type="text" id="direccion" name="direccion" required>
@@ -58,6 +123,7 @@
                 <option value="21">Australia</option>
                 <option value="22">Zimbabue</option>
                 <option value="23">Reino Unido</option>
+            </select>
 
             <button type="submit">Registrarse</button>
         </form>
@@ -67,3 +133,4 @@
     </footer>
 </body>
 </html>
+
