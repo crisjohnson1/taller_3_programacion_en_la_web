@@ -66,6 +66,17 @@
 
             return true; // Si todas las validaciones pasan, se envía el formulario
         }
+        function mostrarRegistroGustos() {
+            var registroGustos = document.getElementById("registro_gustos");
+            if (document.getElementById("gustos_si").checked) {
+                registroGustos.style.display = "block";
+            } else {
+                registroGustos.style.display = "none";
+            }
+        }
+        function mostrarValor(valor, elementoMostrar) {
+            document.getElementById(elementoMostrar).innerHTML = valor;
+        }
     </script>
 </head>
 <body>
@@ -125,6 +136,37 @@
                 <option value="23">Reino Unido</option>
             </select>
 
+            <label for="gustos_si">¿Desea registrar sus gustos de vehículos?</label>
+            <input type="radio" id="gustos_si" name="gustos_vehiculos" value="si" onclick="mostrarRegistroGustos()">
+            <label for="gustos_si">Sí</label>
+            <input type="radio" id="gustos_no" name="gustos_vehiculos" value="no" checked>
+            <label for="gustos_no">No</label>
+
+            <div id="registro_gustos" style="display: none;">
+                <h2>Registro de Gustos de Vehículos</h2>
+
+                <label for="color_favorito">Color Favorito:</label>
+                <input type="text" id="color_favorito" name="color_favorito">
+                <br>
+
+                <label for="marca_carro">Marca de Carro Favorita:</label>
+                <input type="text" id="marca_carro" name="marca_carro">
+                <br>
+                <label for="estilo_carro">Estilo de Carro Favorito:</label>
+                <input type="text" id="estilo_carro" name="estilo_carro">
+                <br>
+                <label for="modelo_carro">Modelo de Carro Favorito:</label>
+                <input type="text" id="modelo_carro" name="modelo_carro">
+                <br>
+                <label for="valor_minimo">Valor Mínimo que estaría dispuesto a gastar:</label>
+                <input type="range" id="valor_minimo" name="valor_minimo" min="0" max="10000000" step="1000" onchange="mostrarValor(this.value, 'valor_minimo_mostrado')">
+                <span id="valor_minimo_mostrado">0</span>
+                <br>
+                <label for="valor_maximo">Valor Máximo que estaría dispuesto a gastar:</label>
+                <input type="range" id="valor_maximo" name="valor_maximo" min="0" max="10000000" step="1000" onchange="mostrarValor(this.value, 'valor_maximo_mostrado')">
+                <span id="valor_maximo_mostrado">0</span>
+            </div>
+
             <button type="submit">Registrarse</button>
         </form>
     </main>
@@ -133,4 +175,3 @@
     </footer>
 </body>
 </html>
-
